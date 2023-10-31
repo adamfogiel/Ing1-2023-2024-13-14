@@ -1,52 +1,43 @@
-# Prerequisites
-*.d
 
-# Object files
-*.o
-*.ko
-*.obj
-*.elf
 
-# Linker output
-*.ilk
-*.map
-*.exp
 
-# Precompiled Headers
-*.gch
-*.pch
 
-# Libraries
-*.lib
-*.a
-*.la
-*.lo
 
-# Shared objects (inc. Windows DLLs)
-*.dll
-*.so
-*.so.*
-*.dylib
+#include <stdio.h>
 
-# Executables
-*.exe
-*.out
-*.app
-*.i*86
-*.x86_64
-*.hex
+int main() {
+    //on definit les variables
+    int personne;
+    int boxoffice = 0;
+    int tauxremplissage = 0;
+// on instaure une boucle pour que le programme ne s arrete pas apres la premiere saisie
+    while(1) {
+        printf("nouvelle saisie\n");
+        scanf("%d", &personne);
+        // on met une condition pour que si le controleur met 1 alors le box office monte de 10 et le taux de remplissage monte de 1
+        if (personne == 1) {
+            printf("10 euros dans le box office\n");
+            boxoffice = boxoffice + 10;
+            printf("le boxoffice est %d\n", boxoffice);
+            tauxremplissage = tauxremplissage + 1;
+            //cette condition permet de ne pas depasser 100
+            printf("le taux de remplissage est %d\n", tauxremplissage);
+            if (tauxremplissage > 100){
+                break;
+                printf("capacite maximal");
+            }
 
-# Debug files
-*.dSYM/
-*.su
-*.idb
-*.pdb
+            //on met un else avec break pour que le compteur s arrete lorsque le contoleur met 0
+        }else if (personne == 0) {
+            break;
+            // on instaure une derniere condition pour que si la saisie est differente de 0 alors le progrmme demande une nouvelle saisie
+        } else if (personne =! 1, 0) {
+            printf("nouvelle saisie");
+        }
 
-# Kernel Module Compile Results
-*.mod*
-*.cmd
-.tmp_versions/
-modules.order
-Module.symvers
-Mkfile.old
-dkms.conf
+
+    }
+
+
+    return 0;
+}
